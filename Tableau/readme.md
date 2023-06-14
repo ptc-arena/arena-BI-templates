@@ -19,40 +19,41 @@ The instructions for configuring the template are below – please download the 
 
 ## Tableau Template File Import and Setup
 <ol type="1">
-<li>Note the data extract email, password, and workspace ID from Step 1 </li><br>
+<li>Note the data extract email, password, and workspace ID from Step 1<br>
   Note: we are currently developing an enhancement to gracefully handle incorrect user credentials (API result status code: 400). 
-  Triple check your credentials if you have any download issues, and wait 5 minutes in case your data extract account gets locked. 
+  Triple check your credentials if you have any download issues, and wait 5 minutes in case your data extract account gets locked. </li>
 <li>If necessary, customer must purchase Tableau from their website. (https://www.tableau.com/pricing/teams-orgs)</li>
   <ol><li> At least 1 required Creator license at $70 per month (per user, billed annually) - other editor ($42) and viewer ($15) licenses are cheaper.</li>
     <li>Customers can only use Tableau Desktop with Tableau Cloud (hosted) or Tableau Server (on-premise or public cloud).</li>
     <li>The free Tableau Public space won't work with the template file. </li></ol>
   
  <li>Open it in Tableau Desktop by doing the following:</li> 
-  <ol><li>From the landing page, click File > Open and the selecting the .twb sample file. </li>
+  <ol><li>From the landing page, click File > Open and the selecting the .twb sample file.
 
+&nbsp;
 <p align="center">
     <img src="https://github.com/ptc-arena/.github/blob/main/Tableau_SS1.png" alt="Arena Analytics">
 </p>
-&nbsp;
+&nbsp;</li>
     
-    <li>Once the file opens, you will need to log into your Arena workspace. Select the "Data Source" tab in the bottom-left of the screen. 
-      This will prompt you to log into Arena with your Data Extract email, password, and workspace ID from Step 1.</li>
-    <li>On the next dialog box, enter values for the variables according to your workspace:</li>
-    <ol><li>Select your Arena Instance: select the correct API URL for either the North America, GovCloud, or Europe API instance (default: Arena - North America)<br>
-      •	https://api.arenasolutions.com/v1 (North America)<br>
-•	https://api.arenagov.com/v1 (AWS GovCloud)<br>
-•	https://api.europe.arenaplm.com/v1 (Europe)</li>
-      <li>Arena Email (var_email) - the REST API User email (ie. Data Extract setup email address – see above)</li>
-      <li>Arena Password (var_password) - the REST API User password</li>
-      <li>Arena Workspace ID (var_workspace_id) - the workspace ID you want to connect to</li>
-    
+  <li>Once the file opens, you will need to log into your Arena workspace. Select the "Data Source" tab in the bottom-left of the screen. This will prompt you to log into Arena with your Data Extract email, password, and workspace ID from Step 1.</li>
+   <li>On the next dialog box, enter values for the variables according to your workspace:</li>
+         <ol><li>Select your Arena Instance: select the correct API URL for either the North America, GovCloud, or Europe API instance (default: Arena - North America)<br>
+        •	https://api.arenasolutions.com/v1 (North America)<br>
+        •	https://api.arenagov.com/v1 (AWS GovCloud)<br>
+        •	https://api.europe.arenaplm.com/v1 (Europe)</li>
+            <li>Arena Email (var_email) - the REST API User email (ie. Data Extract setup email address – see above)</li>
+            <li>Arena Password (var_password) - the REST API User password</li>
+            <li>Arena Workspace ID (var_workspace_id) - the workspace ID you want to connect to</li>
+
+&nbsp; 
 <p align="center">
     <img src="https://github.com/ptc-arena/.github/blob/main/Tableau_SS2.png" alt="Arena Analytics">
 </p>
 &nbsp;  
    
-    <li>Enter your credentials and click "Download Arena Data". The query should take 1-2 minutes (or faster depending on your internet bandwidth).</li>
-    <li>Then you can click on the other dashboard tabs along the bottom of the screen to review and customize.</li>
+   <li>Enter your credentials and click "Download Arena Data". The query should take 1-2 minutes (or faster depending on your internet bandwidth).</li>
+   <li>Then you can click on the other dashboard tabs along the bottom of the screen to review and customize.</li>
  
 &nbsp;
 <p align="center">
@@ -60,9 +61,9 @@ The instructions for configuring the template are below – please download the 
 </p>
 &nbsp;
 
-  <li>You can save your own Tableau workbook once finished, and manage that version going forward. You can also publish the data source and dashboards from 
+ <li>You can save your own Tableau workbook once finished, and manage that version going forward. You can also publish the data source and dashboards from 
     Tableau Desktop to Tableau Cloud for other Tableau users to reference by using the publishing options under the Server menu. </li>
-  </ol>
+        </ol>
 
 </ol><br>
   
