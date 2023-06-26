@@ -42,9 +42,9 @@ The instructions for configuring the template are below – please download the 
         •	https://api.arenasolutions.com/v1 (North America)<br>
         •	https://api.arenagov.com/v1 (AWS GovCloud)<br>
         •	https://api.europe.arenaplm.com/v1 (Europe)</li>
-            <li>Arena Email (var_email) - the REST API User email (ie. Data Extract setup email address – see above)</li>
-            <li>Arena Password (var_password) - the REST API User password</li>
-            <li>Arena Workspace ID (var_workspace_id) - the workspace ID you want to connect to</li>
+            <li>Arena Email - the REST API User email (ie. Data Extract setup email address – see above)</li>
+            <li>Arena Password - the REST API User password</li>
+            <li>Arena Workspace ID - the workspace ID you want to connect to</li>
 
 &nbsp; 
 <p align="center">
