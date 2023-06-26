@@ -36,7 +36,7 @@ The instructions for configuring the template are below – please download the 
 </p>
 &nbsp;</li>
     
-  <li>Once the file opens, you will need to log into your Arena workspace. Select the "Data Source" tab in the bottom-left of the screen. This will prompt you to log into Arena with your Data Extract email, password, and workspace ID from Step 1.</li>
+  <b>Once the file opens, you will need to log into your Arena workspace. Select the "Data Source" tab in the bottom-left of the screen. This will prompt you to log into Arena with your Data Extract email, password, and workspace ID from Step 1.</b>
    <li>On the next dialog box, enter values for the variables according to your workspace:</li>
          <ol><li>Select your Arena Instance: select the correct API URL for either the North America, GovCloud, or Europe API instance (default: Arena - North America)<br>
         •	https://api.arenasolutions.com/v1 (North America)<br>
