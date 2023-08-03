@@ -74,7 +74,7 @@ A: Cancel the query and make sure that you select the Data Source tab in the bot
 <br><br>
 
 Q: I still need help, what should I do?<br>
-A: Please contact your Arena Account Manager, Customer Success Coach, or Arena Support and we’ll gladly review your connection issue and get your Power BI environment loaded with your Arena data.
+A: Please contact your Arena Account Manager, Customer Success Coach, or Arena Support and we’ll gladly review your connection issue and get your Tableau environment loaded with your Arena data.
 
 <br>
 
