@@ -6,7 +6,7 @@ The instructions for configuring the template are below – please download the 
 <ol type="1">
 <li>Set up a data extract scheduled setup in your Arena workspace settings 
 <ol><li>1x per day is suggested but you can select any recurring period – the template file only loads the latest run of Data Extract </li>
-<li>Select the Full extract type </li>
+<li>Select the Full extract type <b>- NOTE: Full+Delta extracts are not supported by this template since Power BI cannot compute the ETL of delta Arena transactions.</b></li>
 <li>Select all available data extract views – the queries will handle any views with no data </li></ol></li>
 
 &nbsp;
