@@ -12,7 +12,7 @@ The instructions for configuring the template are below – please download the 
 
 &nbsp;
 <p align="center">
-    <img src="https://github.com/ptc-arena/.github/blob/main/Arena_Analytics_SS.png" alt="Arena Analytics">
+![image](https://github.com/user-attachments/assets/fb44ec0c-7cd8-4385-bfcf-b206fd862a8f)
 </p>
 &nbsp;
 
