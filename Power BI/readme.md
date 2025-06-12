@@ -4,10 +4,11 @@ The instructions for configuring the template are below – please download the 
 
 ## Data Extract Setup (Pre-requisite)
 <ol type="1">
-<li>Set up a data extract scheduled setup in your Arena workspace settings 
+<li>Set up and schedule a data extract in your Arena workspace settings 
 <ol><li>1x per day is suggested but you can select any recurring period – the template file only loads the latest run of Data Extract </li>
-<li>Select the Full extract type <b>- NOTE: Full+Delta extracts are not supported by this template since Power BI cannot compute the ETL of delta Arena transactions.</b></li>
+<li>Select the Full extract type <b>- NOTE: Full+Delta extracts are not supported by this template since Power BI cannot manage the incremental ETL of delta Arena transactions - it will replace all table contents from the previous refresh each time it refreshes data, thus any Delta refresh will lose the prior Full load's data.</b></li>
 <li>Select all available data extract views – the queries will handle any views with no data </li></ol></li>
+<li>Select either the "DataExtract CSV" or "RFC 4180 CSV" format – the queries will handle either format </li></ol></li>
 
 &nbsp;
 <p align="center">
@@ -15,7 +16,7 @@ The instructions for configuring the template are below – please download the 
 </p>
 &nbsp;
 
-<li>Note the data extract email, password, and workspace ID from Step 1 </li></ol>
+<li>Starting in Release 2025.2 , there is no longer a DataExtract user profile set up upon creation. You will need to create a machine user profile under Workspace Settings > Employees > Machine Users. For any existing DataExtract setups, the prior DataExtract logins were converted to a Machine User during the release of 2025.2. <b>The Machine User must be an Arena administrator in order for it to access the DataExtract endpoints in the API.</b> Note the Machine User's email and password you generated, as well as the workspace ID. These will be needed for the setup in Power BI.  </li></ol>
 
 ## Power BI Template File Import and Setup
 <ol type="1">
@@ -45,9 +46,9 @@ The instructions for configuring the template are below – please download the 
       •	https://api.arenasolutions.com/v1 (North America)<br>
 •	https://api.arenagov.com/v1 (AWS GovCloud)<br>
 •	https://api.europe.arenaplm.com/v1 (Europe)</li>
-      <li>Arena Email (var_email) - the REST API User email (ie. Data Extract setup email address – see above)</li>
-      <li>Arena Password (var_password) - the REST API User password</li>
-      <li>Arena Workspace ID (var_workspace_id) - the workspace ID you want to connect to</li></ol>
+      <li>Arena Email (var_email) - the Machine User's email (see setup in section above)</li>
+      <li>Arena Password (var_password) - the Machine User password</li>
+      <li>Arena Workspace ID (var_workspace_id) - the Arena workspace ID you want to connect to</li></ol>
       
 &nbsp;
 <p align="center">
@@ -56,8 +57,8 @@ The instructions for configuring the template are below – please download the 
 &nbsp;
 
 <li>A refresh progress box will appear as Power BI connects to Arena REST API and downloads and extracts the CSV data for each of the Data Extract files. <br>
-  Note: On the initial connection to the Arena API, you might get a pop-up dialog box that asks you to get the permission level for the connection. 
-  Make sure you select “Anonymous” for the Authentication Type, and select “Organizational” for the Privacy Level. Click OK to continue. </li>
+  <b>Note: On the initial connection to the Arena API, you might get a pop-up dialog box that asks you to get the permission level for the connection. 
+  Make sure you select “Anonymous” for the Authentication Type, and select “Organizational” for the Privacy Level.</b> Click OK to continue. </li>
   
 &nbsp;
 <p align="center">
@@ -96,4 +97,4 @@ A: Please contact your Arena Account Manager, Customer Success Coach, or Arena S
 
 ## Copyright & license
 
-Copyright (c) 2023 Arena, a PTC Business - Released under the [MIT license](LICENSE). Arena Solutions and the Arena Logo are trademarks of PTC, Corporation.
+Copyright (c) 2025 Arena, a PTC Business - Released under the [MIT license](LICENSE). Arena Solutions and the Arena Logo are trademarks of PTC, Corporation.
