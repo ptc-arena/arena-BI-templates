@@ -12,7 +12,7 @@ The instructions for configuring the template are below – please download the 
 
 &nbsp;
 <p align="center">
-![image](https://github.com/user-attachments/assets/fb44ec0c-7cd8-4385-bfcf-b206fd862a8f)
+![Arena-DataExtract-Setup](https://github.com/user-attachments/assets/76f59d84-df51-4f75-a419-ad6bd842ce33)
 </p>
 &nbsp;
 
