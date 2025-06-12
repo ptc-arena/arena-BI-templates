@@ -10,11 +10,9 @@ The instructions for configuring the template are below – please download the 
 <li>Select all available data extract views – the queries will handle any views with no data </li></ol></li>
 <li>Select either the "DataExtract CSV" or "RFC 4180 CSV" format – the queries will handle either format </li></ol></li>
 
-&nbsp;
 <p align="center">
-![Arena-DataExtract-Setup](https://github.com/user-attachments/assets/76f59d84-df51-4f75-a419-ad6bd842ce33)
+<img src="https://github.com/user-attachments/assets/76f59d84-df51-4f75-a419-ad6bd842ce33"/>
 </p>
-&nbsp;
 
 <li>Starting in Release 2025.2 , there is no longer a DataExtract user profile set up upon creation. You will need to create a machine user profile under Workspace Settings > Employees > Machine Users. For any existing DataExtract setups, the prior DataExtract logins were converted to a Machine User during the release of 2025.2. <b>The Machine User must be an Arena administrator in order for it to access the DataExtract endpoints in the API.</b> Note the Machine User's email and password you generated, as well as the workspace ID. These will be needed for the setup in Power BI.  </li></ol>
 
