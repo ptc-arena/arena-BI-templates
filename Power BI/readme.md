@@ -14,7 +14,7 @@ The instructions for configuring the template are below – please download the 
 <img src="https://github.com/user-attachments/assets/76f59d84-df51-4f75-a419-ad6bd842ce33"/>
 </p>
 
-<li>Starting in Release 2025.2 , there is no longer a DataExtract user profile set up upon creation. You will need to create a machine user profile under Workspace Settings > Employees > Machine Users. For any existing DataExtract setups, the prior DataExtract logins were converted to a Machine User during the release of 2025.2. <b>The Machine User must be an Arena administrator in order for it to access the DataExtract endpoints in the API.</b> Note the Machine User's email and password you generated, as well as the workspace ID. These will be needed for the setup in Power BI.  </li></ol>
+<li>Starting in Release 2025.2 , there is no longer a DataExtract user profile set up upon creation. You will need to create a machine user profile under Workspace Settings > Employees > Machine Users. For any existing DataExtract setups, the prior DataExtract logins were converted to a Machine User during the release of 2025.2. <b>The Machine User must have the proper Access Policy rules (Read, Edit, Manage DataExtract) to administer DataExtract (or be granted Arena administrator) in order for it to access the DataExtract endpoints in the API.</b> Note the Machine User's email and password you generated, as well as the workspace ID. These will be needed for the setup in Power BI.  </li></ol>
 
 ## Power BI Template File Import and Setup
 <ol type="1">
