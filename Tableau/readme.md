@@ -4,22 +4,24 @@ The instructions for configuring the template are below – please download the 
 
 ## Data Extract Setup (Pre-requisite)
 <ol type="1">
-<li>Set up a data extract scheduled setup in your Arena workspace settings 
+<li>Set up and schedule a data extract in your Arena workspace settings 
 <ol><li>1x per day is suggested but you can select any recurring period – the template file only loads the latest run of Data Extract </li>
-<li>Select the Full extract type </li>
+<li>Select the Full extract type - Full is Recommended</li>
 <li>Select all available data extract views – the queries will handle any views with no data </li></ol></li>
+<li>Select either the "DataExtract CSV" or "RFC 4180 CSV" format – the queries will handle either format </li></ol></li>
 
-&nbsp;
 <p align="center">
-    <img src="https://github.com/ptc-arena/.github/blob/main/Arena_Analytics_SS2.png" alt="Arena Analytics">
+<img src="https://github.com/user-attachments/assets/76f59d84-df51-4f75-a419-ad6bd842ce33"/>
 </p>
-&nbsp;
 
-<li>Note the data extract email, password, and workspace ID from Step 1 </li></ol>
+<li>Starting in Release 2025.2 , there is no longer a DataExtract user profile set up upon creation. You will need to create a machine user profile under Workspace Settings > Employees > Machine Users. For any existing DataExtract setups, the prior DataExtract logins were converted to a Machine User during the release of 2025.2. <b>The Machine User must have the proper Access Policy rules (Read DataExtract under the Workspace Settings sub-tab of a policy) to administer DataExtract (or be granted Arena administrator) in order for it to access the DataExtract endpoints in the API - below is a screenshot of a basic access policy to set up and assign to the Machine User profile in its workspace access.</b> </li>
+<img src="https://github.com/user-attachments/assets/a6d4a6a3-6b6a-4ad0-a0bc-7a938aeb487a"/>
+<li>Note the Machine User's email and password you generated, as well as the workspace ID. These will be needed for the setup in Tableau.  </li>
+</ol>
 
 ## Tableau Template File Import and Setup
 <ol type="1">
-<li>Note the data extract email, password, and workspace ID from Step 1<br>
+<li>Note the Machine User's email, password, and workspace ID from Step 1<br>
   Note: we are currently developing an enhancement to gracefully handle incorrect user credentials (API result status code: 400). 
   Triple check your credentials if you have any download issues, and wait 5 minutes in case your data extract account gets locked. </li>
 <li>If necessary, customer must purchase Tableau from their website. (https://www.tableau.com/pricing/teams-orgs)</li>
@@ -42,8 +44,8 @@ The instructions for configuring the template are below – please download the 
         •	https://api.arenasolutions.com/v1 (North America)<br>
         •	https://api.arenagov.com/v1 (AWS GovCloud)<br>
         •	https://api.europe.arenaplm.com/v1 (Europe)</li>
-            <li>Arena Email - the REST API User email (ie. Data Extract setup email address – see above)</li>
-            <li>Arena Password - the REST API User password</li>
+            <li>Arena Email - the REST API User email (ie. The Machine user's email address – see above)</li>
+            <li>Arena Password - the Machine User password</li>
             <li>Arena Workspace ID - the workspace ID you want to connect to</li>
 
 &nbsp; 
