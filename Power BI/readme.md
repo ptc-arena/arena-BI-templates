@@ -8,16 +8,19 @@ The instructions for configuring the template are below – please download the 
 <ol><li>1x per day is suggested but you can select any recurring period – the template file only loads the latest run of Data Extract </li>
 <li>Select the Full extract type <b>- NOTE: Full+Delta extracts are not supported by this template since Power BI cannot manage the incremental ETL of delta Arena transactions - it will replace all table contents from the previous refresh each time it refreshes data, thus any Delta refresh will lose the prior Full load's data.</b></li>
 <li>Select all available data extract views – the queries will handle any views with no data </li></ol></li>
-<li>Select either the "DataExtract CSV" or "RFC 4180 CSV" format – the queries will handle either format </li></ol></li>
+<li>Select either the "DataExtract CSV" or "RFC 4180 CSV" format – the queries will handle either format </li>
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/76f59d84-df51-4f75-a419-ad6bd842ce33"/>
 </p>
 
-<li>Starting in Release 2025.2 , there is no longer a DataExtract user profile set up upon creation. You will need to create a machine user profile under Workspace Settings > Employees > Machine Users. For any existing DataExtract setups, the prior DataExtract logins were converted to a Machine User during the release of 2025.2. <b>The Machine User must have the proper Access Policy rules (Read DataExtract under the Workspace Settings sub-tab of a policy) to administer DataExtract (or be granted Arena administrator) in order for it to access the DataExtract endpoints in the API.</b> </li>
+<li>Starting in Release 2025.2 (June 2025), there is no longer a dedicated API user login for DataExtract. For any existing DataExtract setups, any existing DataExtract API users were converted to a Machine User during the release. <ol><li>You should be able to find the converted machine user profile under Workspace Settings > Employees > Machine Users - look for a user with the format "[DataExtract name] <b><i>Extraction</i></b>".</li>
+  <img src="https://github.com/user-attachments/assets/f6d1a8e9-e2fc-45d1-8a29-bfb113241c1b"/>
+  <li>If you are setting up a new DataExtract since 2025.2, you will need to create a new machine user profile.  <b>The Machine User must have the proper Access Policy rules (Under the desired workspace, Go to the Workspace Settings sub-tab of a policy and create a Read action and select DataExtract - see screenshot below) in order for it to access the DataExtract endpoints in the API. An alternative to having the Read DataExtract policy rule would be setting the machine user as an Arena administrator (but not recommended for security reasons). </li>
 <img src="https://github.com/user-attachments/assets/a6d4a6a3-6b6a-4ad0-a0bc-7a938aeb487a"/>
+  <li>The machine user MUST also be added as an Owner under the DataExtract settings in order to access the ZIP file from the data extract run. </b>Note that being added as an owner only applies to runs going forward, it does not grant access to prior data extract run downloads.</li></ol>
+ <img src="https://github.com/user-attachments/assets/714c3962-47bb-4f81-b168-32ddc16ddc4e"/>
 <li>Note the Machine User's email and password you generated, as well as the workspace ID. These will be needed for the setup in Power BI.  </li></ol>
-
 ## Power BI Template File Import and Setup
 <ol type="1">
 <li>Download and open MS Power BI Desktop - <a href="https://www.microsoft.com/en-us/download/details.aspx?id=5849">Latest location here</a></li>
